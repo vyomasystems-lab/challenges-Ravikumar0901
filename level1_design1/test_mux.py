@@ -8,3 +8,10 @@ async def test_mux(dut):
     """Test for mux2"""
 
     cocotb.log.info('##### CTB: Develop your test here ########')
+    """Test for input as 1101 """
+    S=1101
+    #input Driving
+    dut.sel.value = S
+
+    await Timer(2,units='2')
+    assert dut.out.value == inp13,f"Mux Result is incorrect: {dut.X.value}!=13"
