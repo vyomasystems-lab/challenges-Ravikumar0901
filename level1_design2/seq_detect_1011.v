@@ -42,6 +42,9 @@ module seq_detect_1011(seq_seen, inp_bit, reset, clk);
           next_state = SEQ_1;
         else
           next_state = IDLE;
+      endif        
+        else 
+          next_state = S10;
       end
       SEQ_1:
       begin
@@ -63,7 +66,9 @@ module seq_detect_1011(seq_seen, inp_bit, reset, clk);
           next_state = SEQ_1011;
         else
           next_state = IDLE;
-      end
+      endif        
+        else 
+          next_state = S10;
       SEQ_1011:
       begin
         next_state = IDLE;
