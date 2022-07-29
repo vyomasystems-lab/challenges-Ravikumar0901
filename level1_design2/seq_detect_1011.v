@@ -38,10 +38,10 @@ module seq_detect_1011(seq_seen, inp_bit, reset, clk);
   begin
     case(current_state)
     IDLE:
-      begin
-        if(inp_bit == 1)
+    begin
+      if(inp_bit == 1)
           next_state = SEQ_1;
-        else
+      else
           next_state = IDLE;
       end
       
