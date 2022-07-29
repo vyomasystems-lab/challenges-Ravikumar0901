@@ -55,20 +55,22 @@ module seq_detect_1011(seq_seen, inp_bit, reset, clk);
         if(inp_bit == 1)
           next_state = SEQ_101;
         else
-          next_state = IDLE;
+          next_state = SEQ_1;
       end
       SEQ_101:
       begin
         if(inp_bit == 1)
           next_state = SEQ_1011;
         else
-          next_state = IDLE;
+          next_state = SEQ_10;
       end
       SEQ_1011:
       begin
+        next_state = SEQ_101;
+      else
         next_state = IDLE;
       
-     end
+      end
     endcase
   end
 endmodule
