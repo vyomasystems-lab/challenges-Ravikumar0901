@@ -46,11 +46,11 @@ async def test_seq_bug2(dut):
     await FallingEdge(dut.clk)
     dut.inp_bit.value = 1
     await FallingEdge(dut.clk)
+    dut.inp_bit.value = 1
+    await FallingEdge(dut.clk)
+    dut.inp_bit.value = 1
+    await FallingEdge(dut.clk)
     dut.inp_bit.value = 0
     await FallingEdge(dut.clk)
-    dut.inp_bit.value = 1
-    await FallingEdge(dut.clk)
-    dut.inp_bit.value = 1
-    await FallingEdge(dut.clk)
 
-    assert dut.seq_seen.value == 1,f'Sequence must be detected but is not detect,ed but is not detected. Given sequence = 101011. Model Output: {dut.seq_seen.value} Expected Ouput: 1'
+    assert dut.seq_seen.value == 1,f'Sequence is to be detected  but is not detected. Given sequence = 101110. Model Output: {dut.seq_seen.value} Expected Ouput: 1'
