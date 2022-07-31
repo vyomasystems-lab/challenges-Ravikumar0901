@@ -7,7 +7,7 @@ PWD=$(shell pwd)
 VERILOG_SOURCES = $(PWD)/BCD_Adder.v              # provide your design path
 
 TOPLEVEL := BCD_Adder          # design file
-MODULE   := test_BCD_Adder    # test file
+MODULE   := test_BCD_Adder     # test file
 
 include $(shell cocotb-config --makefiles)/Makefile.sim
 

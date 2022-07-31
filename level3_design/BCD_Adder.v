@@ -1,4 +1,4 @@
-module bcd_adder(a,b,cin,sum,cout);
+module BCD_adder(a,b,cin,sum,cout);
     input [3:0] a,b;
     input cin;
     output [3:0] sum;
