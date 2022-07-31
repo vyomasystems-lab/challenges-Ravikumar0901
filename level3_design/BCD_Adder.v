@@ -1,4 +1,4 @@
-module BCD_adder(a,b,cin,sum,cout);
+module BCD_Adder(a,b,cin,sum,cout);
     input [3:0] a,b;
     input cin;
     output [3:0] sum;
@@ -21,4 +21,5 @@ module BCD_adder(a,b,cin,sum,cout);
             cout = 0;
             sum = temp[3:0];
         end
-    end     
+    end  
+endmodule   
