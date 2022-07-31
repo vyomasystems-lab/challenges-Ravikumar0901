@@ -4,10 +4,10 @@ TOPLEVEL_LANG ?= verilog
 
 PWD=$(shell pwd)
 
-VERILOG_SOURCES = $(PWD)/BCD Adder.v              # provide your design path
+VERILOG_SOURCES = $(PWD)/BCD_Adder.v              # provide your design path
 
-TOPLEVEL := BCD Adder          # design file
-MODULE   := test_BCD Adder    # test file
+TOPLEVEL := BCD_Adder          # design file
+MODULE   := test_BCD_Adder    # test file
 
 include $(shell cocotb-config --makefiles)/Makefile.sim
 
