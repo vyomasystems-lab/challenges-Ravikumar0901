@@ -10,16 +10,20 @@ import random
 async def adder_basic_test(dut):
     """Test for 5 + 3"""
 
-    A = 5
-    B = 3
+    A = 9
+    B = 6
     Cin=0
+    Co=1
 
     # input driving
     dut.a.value = A
     dut.b.value = B
     dut.cin.value = Cin
 
+    dut.cout.value = Co
+
+
     await Timer(2, units='ns')
 
-    assert dut.sum.value == A+B, f"Adder result is incorrect: {dut.X.value} != 8"
-
+    assert dut.sum.value == Co"+"A+B+Cin,f"Adder result is incorrect: {dut.sum.value} != 5"
+    
